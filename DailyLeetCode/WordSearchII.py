@@ -1,5 +1,3 @@
-# Date: 05-02-2026
-#212. Word Search II
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         neigh=[[0,1],[1,0],[-1,0],[0,-1]]
@@ -19,9 +17,11 @@ class Solution:
                 neighbor_char = board[child[0]][child[1]]
                 print(neighbor_char)
                 val=dfs(child[0],child[1],nextIndex+1,sel+[neighbor_char])
-                board[i][j]=tmp
                 if val:
+                    board[i][j]=tmp
                     return val
+            board[i][j]=tmp
+            return ""
         ###########################
         def helper(word):
             for i in range(len(board)):
