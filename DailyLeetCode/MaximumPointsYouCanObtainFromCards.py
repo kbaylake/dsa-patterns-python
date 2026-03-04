@@ -1,5 +1,5 @@
 #03-03-2026
-#1423. Maximum Points you can obtain from cards
+#1423. Maximum Points you can obtain from cards solved
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         right=-1
