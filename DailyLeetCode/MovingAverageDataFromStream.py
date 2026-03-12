@@ -1,5 +1,4 @@
 #Moving Data From Stream
-```
 from collections import deque
 class MovingAverage:
 
