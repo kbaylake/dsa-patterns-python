@@ -31,3 +31,4 @@ class Solution:
                     if curr==True:
                         return True
         return False
+# Improved
