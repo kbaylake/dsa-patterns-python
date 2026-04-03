@@ -1,12 +1,10 @@
 #When order is preserved 
 def moveZeros(nums):
-    left=right=len(nums)-1
-    while right >0:
-        if nums[right]!=0:
-            nums[left], nums[right] = nums[right], nums[left]
-            left-=1
-        right-=1
-    print(left,right)
-    for i in range(0,left+1):
+    left=0
+    pos=0
+    for left in range(len(nums)):
+        if nums[left]!=0 and nums[left+1]==0:
+            nums[left+1]=nums[left]
+            pos+=1
+    for i in range(pos):
         nums[i]=0
-    return nums
